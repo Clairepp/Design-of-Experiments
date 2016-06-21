@@ -1,0 +1,8 @@
+y <- c(40,27,95,69,65,78,63,30,67,47,54,45,22,23,83,75,61,35,10,39,62,64,77,42)
+chemistry <- c(rep(1,12),rep(2,12))
+chemistry <- factor(chemistry)
+heats <- c(rep(c(1,1,2,2,3,3),4))
+heats <- factor(heats)
+ingots <- c(rep(c(1,2),12))
+ingots <- factor(ingots)
+anova(lm<-lm(y~chemistry+chemistry/heats+chemistry/heats/ingots)) 

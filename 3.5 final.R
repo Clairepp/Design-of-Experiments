@@ -1,0 +1,10 @@
+library(stats)
+x <- c(3129,3000,2865,2890,3200,3300,2975,3150,2800,2900,2985,3050,2600,2700,2600,2765)
+y <- c(rep("1",4),rep("2",4),rep("3",4),rep("4",4))
+dat <- data.frame(x,y)
+plot(x~y,data = dat)
+result <- aov(x~y,data = dat)
+summary(result)
+
+str(summary(result))
+TukeyHSD(result,conf.level = 0.95)
